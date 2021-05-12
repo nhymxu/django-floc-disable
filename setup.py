@@ -9,7 +9,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name="django-floc-disable",
-    version="0.1.0",
+    version="1.0.0",
     description="Django middleware to disable Google FLoC tracking",
     long_description=long_description,
     long_description_content_type="text/markdown",

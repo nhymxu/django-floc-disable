@@ -1,0 +1,5 @@
+.venv/
+dist
+build
+poetry.lock
+*.egg-info

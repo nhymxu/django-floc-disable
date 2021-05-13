@@ -4,12 +4,12 @@ import pathlib
 here = pathlib.Path(__file__).parent.resolve()
 
 project_name = "django-floc-disable"
-
 long_description = (here / 'README.md').read_text(encoding='utf-8')
+version = open(here / "django_floc_disable/_version.py").readlines()[-1].split()[-1].strip("\"'")
 
 setup(
-    name="django-floc-disable",
-    version="1.0.0",
+    name=project_name,
+    version=version,
     description="Django middleware to disable Google FLoC tracking",
     long_description=long_description,
     long_description_content_type="text/markdown",

@@ -1,1 +1,1 @@
-__version__ = '1.0.0'
+from django_floc_disable._version import __version__

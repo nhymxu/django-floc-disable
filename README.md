@@ -17,7 +17,7 @@ Install django-floc-disable:
 pip install django-floc-disable
 ```
 
-Add it to your `INSTALLED_APPS`:
+Add it to your `MIDDLEWARE` tuple in `settings.py`:
 
 ```python
 MIDDLEWARE = (

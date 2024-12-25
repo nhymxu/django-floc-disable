@@ -8,11 +8,16 @@ on:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/django-floc-disable
+    permissions:
+      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
 
@@ -22,8 +27,8 @@ jobs:
     - name: Build
       run: python -m build .
 
-    - name: Publish
-      uses: pypa/gh-action-pypi-publish@master
+    - name: Publish / Upload release to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
       with:
         password: ${{ secrets.pypi_password }}
         skip_existing: true

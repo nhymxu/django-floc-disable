@@ -5,7 +5,7 @@ class FLoCDisableMiddleware:
     def __call__(self, request):
         response = self.get_response(request)
 
-        policy = 'interest-cohort=()'
+        policy = 'browsing-topics=()'
         if response.get('Permissions-Policy', ''):
             policy = response['Permissions-Policy'] + ', ' + policy
 

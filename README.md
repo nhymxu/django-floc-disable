@@ -6,7 +6,7 @@ Django middleware to disable Google's Federated Learning of Cohorts (`FLoC`) tra
 
 ## Python / Django Support
 
-- Python 3.6+
+- Python 3.8+
 - Django versions 3+
 
 ## Usage
